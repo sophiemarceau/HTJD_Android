@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="select_sertver_type">
+        <item>全部服务</item>
+        <item>头肩颈按摩</item>
+        <item>中医足底反射</item>
+        <item>全身保健按摩</item>
+        <item>悦享SPA</item>
+    </string-array>
+    <string-array name="select_order_items">
+        <item>由高到低</item>
+        <item>由低到高</item>
+    </string-array>
+    <string-array name="select_distance_items">
+        <item>由远到近</item>
+        <item>由近到远</item>
+    </string-array>
+    <string-array name="select_level_items">
+        <item>全部</item>
+        <item>高级技师</item>
+        <item>特级技师</item>
+    </string-array>
+    <string-array name="affair_level">
+        <item>距离最近</item>
+        <item>评价最高</item>
+        <item>订单最多</item>
+        <item>价格最低</item>
+    </string-array>
+
+</resources>

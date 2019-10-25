@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 字体大小 -->
+    <!-- 一号字体 -->
+    <dimen name="text_size_1">20.0sp</dimen>
+    <!-- 二号字体 -->
+    <dimen name="text_size_2">18.0sp</dimen>
+    <!-- 三号字体 -->
+    <dimen name="text_size_3">16.0sp</dimen>
+    <!-- 四号字体 -->
+    <dimen name="text_size_4">14.0sp</dimen>
+    <!-- 五号字体 -->
+    <dimen name="text_size_5">12.0sp</dimen>
+
+    <!-- 六号字体 -->
+    <dimen name="text_size_6">11.0sp</dimen>
+    <!-- 设置viewpager内部页面之间的间距 -->
+    <dimen name="page_margin_width">10dp</dimen>
+    <dimen name="common_text_size_middle_2">14dp</dimen>
+    <dimen name="text_size_21">21.0sp</dimen>
+    <dimen name="text_size_20">20.0sp</dimen>
+    <dimen name="text_size_19">19.0sp</dimen>
+    <dimen name="text_size_18">18.0sp</dimen>
+    <dimen name="text_size_17">17.0sp</dimen>
+    <dimen name="text_size_16">16.0sp</dimen>
+    <dimen name="text_size_14">14.6sp</dimen>
+    <dimen name="text_size_15">15.0sp</dimen>
+    <dimen name="text_size_13">13.0sp</dimen>
+    <dimen name="text_size_12">12.0sp</dimen>
+    <dimen name="text_size_11">11.0sp</dimen>
+    <dimen name="city_letter_size">12.0dip</dimen>
+    <dimen name="tech_icon_size">73dp</dimen>
+    <dimen name="project_icon_size">73dp</dimen>
+    <!-- title大小 -->
+    <dimen name="title_size">18sp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- heght 50dp -->
+ <dimen name="height_50">50dp</dimen>
+</resources>

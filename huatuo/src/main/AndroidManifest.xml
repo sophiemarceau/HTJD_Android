@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huatuo"
+    android:versionCode="17"
+    android:versionName="3.0.4" >
+
+
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息,wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限,wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 添加可以向外拨打电话的权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- 第三方分享 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- 必选 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name="com.huatuo.base.MyApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/icon_about_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- 百度地图 -->
+        <!--
+             <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="sSZn8G54Fg8udpEkApWzumuG" />
+
+
+        -->
+        <!-- wrz-home测试            W23Tc7znbVnCjQpGuFnHKES1 -->
+        <!-- wrz测试                             sSZn8G54Fg8udpEkApWzumuG -->
+        <!-- ljc测试                             eiGX2Rn4bEdlAbBje6nICIu0 -->
+        <!-- 正式的                                   AXkBC4YqPTq0QEdWbV8hl14j -->
+        <!-- 高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="952b10107b7f2069d7b59ad43fc2fb7e" />
+        <!-- wrz -->
+        <!-- 测试 e4b939e8ed231fab2971a3e3aece5de0 -->
+        <!-- ljc -->
+        <!-- 测试 75b38befbf118cdc9786ba5416287901 -->
+        <!-- 正式的 android:value="952b10107b7f2069d7b59ad43fc2fb7e" /> -->
+
+
+        <!-- 友盟SDK -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="54f01416fd98c5ce9d000654" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="052b63a802278b5c39aaa58499c273e0" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="MeiZu_CHANNEL" />
+
+        <!-- 启动页 -->
+        <activity
+            android:name="com.huatuo.activity.guide.StartActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 导航页 -->
+        <activity
+            android:name="com.huatuo.activity.guide.GuideActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <!-- 首页Activity -->
+        <activity
+            android:name="com.huatuo.activity.home.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.appoint.Apponitment_OnVisit_FromTechActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.appoint.Apponitment_OnVisit_FromProjectActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.appoint.Apponitment_OnStore_FromTechActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.appoint.Apponitment_OnStore_FromProjectActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <!-- 技师详情 -->
+        <activity
+            android:name="com.huatuo.activity.technician.TechnicianDetail"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <!-- 技师评论 -->
+        <activity
+            android:name="com.huatuo.activity.technician.AppraiseList_Avtivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <!-- 选技师 -->
+        <activity
+            android:name="com.huatuo.activity.appoint.Select_ServiceTechnicianList_Activity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+
+        <!-- 订单评价 -->
+        <activity
+            android:name="com.huatuo.activity.order.DianPingActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <!-- 选择可用优惠券 -->
+        <activity
+            android:name="com.huatuo.activity.appoint.Appointment_selectCunpon_Activity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+
+        <!-- 加钟 -->
+        <activity
+            android:name="com.huatuo.activity.appoint.AddTime_Activity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+
+        <!-- 个人中心  我的地址 -->
+        <activity
+            android:name="com.huatuo.activity.personal.AddressListActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <!-- 个人中心  选择地址 -->
+        <activity
+            android:name="com.huatuo.activity.personal.AddressSelectActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <!-- 个人中心  我的地址管理 -->
+        <activity
+            android:name="com.huatuo.activity.personal.AddressManageActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <!-- 个人中心  我的地址编辑 -->
+        <activity
+            android:name="com.huatuo.activity.personal.AddressEditActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <!-- 个人中心  我的地址 -->
+        <activity
+            android:name="com.huatuo.activity.personal.AddressSearchAreaActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+
+        <!-- 登录 -->
+        <activity
+            android:name="com.huatuo.activity.login.LoginActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <!-- 我的华佗  优惠兑换 -->
+        <activity
+            android:name="com.huatuo.activity.personal.ExchangeActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <!-- 我的华佗  优惠兑换 -->
+        <activity
+            android:name="com.huatuo.activity.personal.GuoQiYouHuiQuanActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.personal.XiaoFeiMaActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <!-- 我的华佗  关于华佗 -->
+        <activity
+            android:name="com.huatuo.activity.personal.AboutHuatuoActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.personal.YongHuXieYiActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.personal.MenDianRuZhuActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.personal.ShiYongFanKuiActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.personal.MianZeShengMingActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <!-- 我的华佗  订单详情 -->
+        <activity
+            android:name="com.huatuo.activity.order.OrderDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <!-- 我的华佗  常见问题 -->
+        <activity
+            android:name="com.huatuo.activity.personal.ProblemActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 选择城市 -->
+        <activity
+            android:name="com.huatuo.activity.select_address.SelectAddress_SearchAreaActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.huatuo.citylist.CityListActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <!-- 账户明细 -->
+        <activity
+            android:name="com.huatuo.activity.personal.AccountDetailActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.seach.Search_OnStoreAty"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.huatuo.activity.seach.Search_OnVisitAty"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.huatuo.activity.store.StoreDetail_Aty"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name="com.huatuo.activity.store.Store_FeatureActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  />
+        <activity
+            android:name="com.huatuo.activity.pay.Pay_Activity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.pay.Pay_SecKillActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.pay.QuickyPay_Activity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+
+        <!-- 二维码 -->
+
+        <activity
+            android:name="com.huatuo.zxing.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- 发现 find -->
+        <activity
+            android:name="com.huatuo.activity.find.FindDetail_TechListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.find.FindDetail_ServiceListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.find.FindDetail_StoreListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.find.FindDetail_TextImgListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.personal.Collect_ListActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- 项目详情 -->
+        <activity
+            android:name="com.huatuo.activity.project.ProjectDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- 广告 -->
+        <activity
+            android:name="com.huatuo.activity.ad.AD_ServiceListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.ad.AD_TechListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.ad.AD_StoreListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.huatuo.activity.technician.Image_Show_Aty"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  />
+        <!-- 预约时间页面 -->
+        <activity
+            android:name="com.huatuo.activity.appoint.Appointment_SelectTimeActivity"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- 导航页面 -->
+        <activity
+            android:name="com.huatuo.activity.map.GuideMapActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar" 
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <!-- 我的华佗  秒杀订单列表 -->
+        <activity
+            android:name="com.huatuo.activity.order.OrderList_Flash_Buy_Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+
+        <!-- 我的华佗  秒杀订单列表 -->
+        <activity
+            android:name="com.huatuo.activity.order.OrderDetail_Flash_Buy_Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+
+        <!-- 秒杀专场 -->
+        <activity
+            android:name="com.huatuo.activity.seckill.SecKill_SessionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+           android:theme="@android:style/Theme.Black.NoTitleBar"  >
+        </activity>
+
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <!-- alipay sdk end -->
+
+        <activity
+            android:name="com.huatuo.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name="com.huatuo.activity.pay.AppRegister" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- 百度地图定位在application标签中声明service组件,每个app拥有自己单独的定位service -->
+        <!--
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+
+        -->
+
+
+        <!-- 首先，请在application标签中声明service组件,每个app拥有自己单独的定位service。 -->
+        <service android:name="com.amap.api.location.APSService" >
+        </service>
+    </application>
+
+</manifest>

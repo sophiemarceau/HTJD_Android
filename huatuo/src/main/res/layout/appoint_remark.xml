@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:padding="10dp" >
+
+
+                <EditText
+                    android:id="@+id/et_appoint_remark"
+                    style="@style/appointment_item_content"
+                    android:background="@color/white"
+                    android:hint="说说您还有什么要求（选填）"
+                    android:maxLength="40"
+                    android:textColorHint="@color/c7" />
+            </RelativeLayout>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+   <padding 
+                android:top="6dp"
+                android:bottom="6dp"
+                android:left="8dp"
+                android:right="8dp"/>
+    <!-- 边缘线的宽度和颜色 -->
+    <solid android:color="@color/chongzhi_moneyColor" />
+    <!-- <solid android:color="#c79b65" /> -->
+    <!-- 设置四个角的角度 -->
+    <corners android:radius="360dp" />
+
+</shape>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/white" 
+    android:id="@+id/rl_commit">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_alignParentTop="true"
+        android:background="#b2b2b2" />
+
+    <Button
+        android:id="@+id/bt_appoint_commit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/btn_login_yellow"
+        android:gravity="center"
+        android:text="确认支付"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_17" />
+
+</RelativeLayout>

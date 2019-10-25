@@ -1,0 +1,87 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From huatuo:
+* .DS_Store
+* .idea/
+* .idea/app_user_android.iml
+* .idea/codeStyles/
+* .idea/codeStyles/Project.xml
+* .idea/compiler.xml
+* .idea/encodings.xml
+* .idea/misc.xml
+* .idea/modules.xml
+* .idea/vcs.xml
+* .idea/workspace.xml
+* huatuo.keystore
+* proguard/
+* proguard/dump.txt
+* proguard/mapping.txt
+* proguard/seeds.txt
+* proguard/usage.txt
+From library_pullTorefresh:
+* LICENSE
+* pom.xml
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In library_pullTorefresh:
+* AndroidManifest.xml => library_pullTorefresh/src/main/AndroidManifest.xml
+* assets/ => library_pullTorefresh/src/main/assets
+* res/ => library_pullTorefresh/src/main/res/
+* src/ => library_pullTorefresh/src/main/java/
+In huatuo:
+* AndroidManifest.xml => huatuo/src/main/AndroidManifest.xml
+* libs/AMap_Location_v2.3.0_20160112.jar => huatuo/libs/AMap_Location_v2.3.0_20160112.jar
+* libs/AMap_Services_V2.7.0_20151125.jar => huatuo/libs/AMap_Services_V2.7.0_20151125.jar
+* libs/Android_Map_V2.7.20151124.jar => huatuo/libs/Android_Map_V2.7.20151124.jar
+* libs/SocialSDK_WeiXin_1.jar => huatuo/libs/SocialSDK_WeiXin_1.jar
+* libs/SocialSDK_WeiXin_2.jar => huatuo/libs/SocialSDK_WeiXin_2.jar
+* libs/alipaySdk-20160223.jar => huatuo/libs/alipaySdk-20160223.jar
+* libs/android-support-v7-recyclerview.jar => huatuo/libs/android-support-v7-recyclerview.jar
+* libs/fastjson-1.2.3.jar => huatuo/libs/fastjson-1.2.3.jar
+* libs/httpmime-4.1.3.jar => huatuo/libs/httpmime-4.1.3.jar
+* libs/umeng-analytics-v5.5.3.jar => huatuo/libs/umeng-analytics-v5.5.3.jar
+* libs/umeng_social_sdk.jar => huatuo/libs/umeng_social_sdk.jar
+* libs/universal-image-loader-1.9.3-SNAPSHOT.jar => huatuo/libs/universal-image-loader-1.9.3-SNAPSHOT.jar
+* libs/zxing.jar => huatuo/libs/zxing.jar
+* lint.xml => huatuo/lint.xml
+* proguard-project.txt => huatuo/proguard-project.txt
+* res/ => huatuo/src/main/res/
+* src/ => huatuo/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

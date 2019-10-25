@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/rl_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/pop_info_window_1"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl_guide_left"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/tv_guide_storeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_guide_storeAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tv_guide_storeName"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_guide"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/rl_guide_left"
+            android:background="@drawable/custom_guide_bg"
+            android:gravity="center"
+            android:text="去导航"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_guide"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/pop_info_window_2" />
+
+</RelativeLayout>

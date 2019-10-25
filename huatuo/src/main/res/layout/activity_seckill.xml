@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <com.huatuo.custom_widget.StickyNavLayout
+        android:id="@+id/id_stickynavlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_alignParentTop="true"
+            layout="@layout/activity_seckill__top_img" />
+
+        <include layout="@layout/activity_seckill__tabs2" />
+
+        <!--
+             <include
+            android:layout_marginTop="10dp"
+            layout="@layout/activity_seckill_viewpager" />
+        -->
+
+        <ListView
+            android:id="@id/id_stickynavlayout_listview"
+            style="@style/scrollbar_style2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_color"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:listSelector="#00000000" />
+    </com.huatuo.custom_widget.StickyNavLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true" >
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/head"
+            android:alpha="0"
+            android:text="" />
+
+        <LinearLayout
+            android:id="@+id/ll_back1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/icon_bg"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/icon_back" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/load_data_error_layout"
+        android:visibility="visible" />
+
+    <include
+        layout="@layout/load_data_empty_layout"
+        android:visibility="visible" />
+
+</RelativeLayout>

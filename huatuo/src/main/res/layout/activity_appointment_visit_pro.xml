@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/appoint_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50"
+        android:background="@color/bg_header_color"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_back1"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_back_button_press"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="预约上门" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            style="@style/scrollbar_style2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <include layout="@layout/appoint_service_info_layout" />
+
+                <View
+                    style="@style/splitLine2"
+                    android:layout_marginBottom="10dp" />
+
+                <View style="@style/splitLine2" />
+
+                <LinearLayout
+                    android:id="@+id/layout_store_serviceLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <include layout="@layout/service_grade_gridview" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/layout_store_serviceLevel_bottomLine"
+                    style="@style/splitLine" />
+
+                <include layout="@layout/appoint_clock_add_cut_layout" />
+
+                <View style="@style/splitLine" />
+                <!-- 第一 部分 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/layout_serviceTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:clickable="true" >
+
+                        <TextView
+                            android:id="@+id/tv_time"
+                            style="@style/appointment_item"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="服务时间" />
+
+                        <TextView
+                            android:id="@+id/tv_serviceTime"
+                            style="@style/appointment_item_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/iv_serviceTime_1"
+                            android:layout_toRightOf="@+id/tv_time"
+                            android:gravity="right"
+                            android:hint="@string/select_service_time"
+                            android:textColorHint="@color/c7" />
+
+                        <ImageView
+                            android:id="@+id/iv_serviceTime_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/icon_next_3x" />
+                    </RelativeLayout>
+
+                    <View style="@style/splitLine" />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_serviceAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp" >
+
+                        <TextView
+                            android:id="@+id/tv_dizhi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="服务地址"
+                            android:textColor="@color/c6"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_serviceAddress"
+                            style="@style/appointment_item_ADDRESS"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/iv_dizhi_1"
+                            android:layout_toRightOf="@+id/tv_dizhi"
+                            android:ellipsize="end"
+                            android:gravity="right"
+                            android:hint="@string/appoint_select_address"
+                            android:maxLines="2"
+                            android:textColorHint="@color/c7" />
+
+                        <ImageView
+                            android:id="@+id/iv_dizhi_1"
+                            style="@style/appointment_item"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/icon_next_3x" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:paddingBottom="5dp"
+                        android:visibility="visible" >
+
+                        <TextView
+                            android:id="@+id/tv_serviceAddress_contactName"
+                            style="@style/appointment_item_ADDRESS"
+                            android:layout_toLeftOf="@+id/tv_serviceAddress_contactPhone"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/tv_serviceAddress_contactPhone"
+                            style="@style/appointment_item_ADDRESS"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="25dp"
+                            android:text="" />
+                    </RelativeLayout>
+
+                    <View style="@style/splitLine2" />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_selectJishi"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp" >
+
+                        <TextView
+                            android:id="@+id/tv_jishi"
+                            style="@style/appointment_item"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="选择技师" />
+
+                        <TextView
+                            android:id="@+id/tv_xuanzejishi"
+                            style="@style/appointment_item_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/im_xuanzejishi_next"
+                            android:layout_toRightOf="@+id/tv_jishi"
+                            android:gravity="right"
+                            android:hint="@string/select_tech"
+                            android:textColorHint="@color/c7" />
+
+                        <ImageView
+                            android:id="@+id/im_xuanzejishi_next"
+                            style="@style/appointment_item"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/icon_next_3x" />
+                    </RelativeLayout>
+                    <!-- 填写或选择服务地址 -->
+
+                    <View style="@style/splitLine" />
+                </LinearLayout>
+
+                <!-- 第二部分 -->
+
+                <RelativeLayout
+                    android:id="@+id/layout_isbed"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/white"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_dc"
+                        style="@style/appointment_item_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="带床上门" />
+
+                    <TextView
+                        android:id="@+id/tv_bedFee"
+                        style="@style/appointment_item_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_dc"
+                        android:text="￥20元" />
+
+                    <TextView
+                        android:id="@+id/tv_Fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_bedFee"
+                        android:background="@drawable/custom_bed_fee_bg"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="3dp"
+                        android:text="收费"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <CheckBox
+                        android:id="@+id/iv_selectBed"
+                        style="@style/appointment_item"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/icon_choice_n"
+                        android:button="@null" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_bed_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_bed_tips1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="注：" />
+
+                    <TextView
+                        android:id="@+id/tv_bed_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_bed_tips1"
+                        android:text="带床上门针对为卧床按摩服务提供方便，如您无需慎选" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_isbed"
+                    style="@style/splitLine"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_trafficFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/white"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_jiaotong"
+                        style="@style/appointment_item"
+                        android:layout_width="55dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="交通费" />
+
+                    <TextView
+                        android:id="@+id/tv_trafficFee"
+                        style="@style/appointment_item"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_jiaotong"
+                        android:text="0元" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_trafficFee"
+                    style="@style/splitLine"
+                    android:visibility="gone" />
+
+                <include layout="@layout/appoint_cunpon_layout" />
+
+                <View style="@style/splitLine2" />
+
+                <include layout="@layout/appoint_remark" />
+
+                <View style="@style/splitLine" />
+
+                <View
+                    style="@style/splitLine2"
+                    android:layout_marginTop="10dp" />
+
+                <include layout="@layout/appoint_bottom_price_show_layout" />
+
+                <View style="@style/splitLine2" />
+
+                <include layout="@layout/appoint_pay_type_layout" />
+            </LinearLayout>
+        </ScrollView>
+
+        <include layout="@layout/load_data_error_layout" />
+
+        <include
+            layout="@layout/load_data_empty_layout"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <include layout="@layout/appoint_bt_commit_layout" 
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <com.huatuo.custom_widget.ImageViewCircle
+            android:id="@+id/icon_nick"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_tech_default" />
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/icon_nick" >
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="4dp"
+                android:singleLine="true"
+                android:textColor="@color/c5"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_addTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/tv_nickname"
+                android:singleLine="true"
+                android:textColor="@color/c7"
+                android:textSize="12sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar1"
+                style="@style/My_RatingBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="4dp"
+                android:isIndicator="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="76dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="7dp"
+        android:paddingRight="10dp"
+        android:text=""
+        android:textColor="@color/c5"
+        android:textSize="@dimen/text_size_16" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.125dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/bg_color" />
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <!-- 头部 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_header_color"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_back1"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_back_button_press"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/person_address" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_add"
+        android:layout_below="@id/rl_head" >
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/bg_color"
+            android:dividerHeight="10dp"
+            style="@style/scrollbar_style2"
+            >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/rl_noAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/img_nothing" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:textSize="@dimen/text_size_12"
+                android:text="您还没有添加常用地址" />
+
+        </RelativeLayout>
+<include layout="@layout/load_data_error_layout" />
+        <include layout="@layout/load_data_empty_layout" />
+    </FrameLayout>
+    <View style="@style/splitLine2" 
+        android:layout_above="@+id/rl_add"/>
+    <RelativeLayout
+        android:id="@+id/rl_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bt_layout_bg"
+         android:padding="10dp"
+         android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_login_yellow"
+             android:textSize="@dimen/text_size_14"
+            android:gravity="center"
+            android:text="添加新地址"
+            android:textColor="@color/white"
+           />
+    </RelativeLayout>
+
+</RelativeLayout>

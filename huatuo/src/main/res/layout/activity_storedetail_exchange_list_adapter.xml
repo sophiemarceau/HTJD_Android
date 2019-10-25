@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_root1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_coupon_get"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="优惠券"
+            android:textSize="10sp" 
+            android:textColor="@color/store_cunpon"/>
+
+        <TextView
+            android:id="@+id/tv_couponName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:singleLine="true"
+            android:layout_marginTop="2dp"
+            android:textSize="11sp"
+            android:textColor="@color/store_cunpon"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_used"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/bg_coupon_posgary"
+        android:visibility="gone" />
+
+</RelativeLayout>

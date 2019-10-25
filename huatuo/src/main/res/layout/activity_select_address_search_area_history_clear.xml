@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    android:orientation="vertical" 
+    android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_search_address_history_clear"
+            android:layout_width="169dp"
+            android:layout_height="34dp"
+            android:layout_centerInParent="true"
+            android:text="清空搜索记录" 
+            android:textColor="@color/c5"
+            android:textSize="@dimen/text_size_14"
+            android:gravity="center"
+            android:background="@drawable/custom_search_area_clear_bg"/>
+
+
+</RelativeLayout>

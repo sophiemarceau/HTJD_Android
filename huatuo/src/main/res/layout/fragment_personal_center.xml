@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.huatuo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/bg_header_color2"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            style="@style/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的华佗" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_userInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/uc_bg_header" >
+                
+                <com.huatuo.custom_widget.ImageViewCircle
+                    android:id="@+id/iv_icon"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_login" />
+
+                <LinearLayout
+                    android:id="@+id/ll_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/iv_icon"
+                    android:layout_toLeftOf="@+id/tv_zhuxiao"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="未知昵称"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_userMobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                
+
+
+
+                        <TextView
+                            android:id="@+id/tv_zhuxiao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp" 
+                        android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                            android:text="退出登录"
+                            android:textColor="@color/c1" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/uc_bg_header"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="117dp"
+                    android:layout_height="41dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/uc_btn_login"
+                    android:text="点击登录"
+                    android:textColor="@color/c3"
+                    android:textSize="@dimen/text_size_2" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_JinE"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/ivJinE"
+                    style="@style/myHuatuo_tab_icon_style"
+                    android:src="@drawable/uc_menu_balance" />
+
+                <TextView
+                    android:id="@+id/tvJinE"
+                    style="@style/myHuatuo_tab_text_style"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="18dp"
+                    android:text="我的余额" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/tvYuE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/ivEnter"
+                        android:text="0.00"
+                        android:textColor="@color/red"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/ivEnter"
+                        style="@style/myHuatuo_tab_icon_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/uc_menu_link" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 我的地址 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_WoDeDingDan"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/ivDuiHuan"
+                        style="@style/myHuatuo_tab_icon_style"
+                        android:src="@drawable/uc_menu_myorder" />
+
+                    <TextView
+                        android:id="@+id/tvDuiHuan"
+                        style="@style/myHuatuo_tab_text_style"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:text="我的订单" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            style="@style/myHuatuo_tab_icon_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/uc_menu_link" />
+
+                        <TextView
+                            android:id="@+id/tv_wodedingdan_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/imageView1"
+                            android:text="您有*个未完成订单"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="58dp"
+                    android:background="@color/bg_color"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_dizhi"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white" >
+
+                    <ImageView
+                        android:id="@+id/ivAddress"
+                        style="@style/myHuatuo_tab_icon_style"
+                        android:src="@drawable/uc_menu_myaddress" />
+
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        style="@style/myHuatuo_tab_text_style"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:text="我的地址" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            style="@style/myHuatuo_tab_icon_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/uc_menu_link" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="58dp"
+                    android:background="@color/bg_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll_WoDeShouCang"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white" >
+
+                    <ImageView
+                        android:id="@+id/ivWoDeShouCang"
+                        style="@style/myHuatuo_tab_icon_style"
+                        android:src="@drawable/uc_menu_myfavorites" />
+
+                    <TextView
+                        android:id="@+id/tvWoDeShouCang"
+                        style="@style/myHuatuo_tab_text_style"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:text="我的收藏" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            style="@style/myHuatuo_tab_icon_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/uc_menu_link" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="58dp"
+                    android:background="@color/bg_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll_YouHuiDuiHuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white" >
+
+                    <ImageView
+                        android:id="@+id/ivDiZhi"
+                        style="@style/myHuatuo_tab_icon_style"
+                        android:src="@drawable/uc_menu_mycoupons" />
+
+                    <TextView
+                        android:id="@+id/tvDiZhi"
+                        style="@style/myHuatuo_tab_text_style"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:text="优惠兑换" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            style="@style/myHuatuo_tab_icon_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/uc_menu_link" />
+
+                        <TextView
+                            android:id="@+id/tv_youhuiduihuan_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:textColor="@color/c7"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="58dp"
+                    android:background="@color/bg_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll_XiaoFeiMa"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white" >
+
+                    <ImageView
+                        android:id="@+id/ivXiaoFeiMa"
+                        style="@style/myHuatuo_tab_icon_style"
+                        android:src="@drawable/uc_menu_myconsumptioncode" />
+
+                    <TextView
+                        android:id="@+id/tvXiaoFeiMa"
+                        style="@style/myHuatuo_tab_text_style"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:text="消费码" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            style="@style/myHuatuo_tab_icon_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/uc_menu_link" />
+
+                        <TextView
+                            android:id="@+id/tv_xiaofeima_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/imageView3"
+                            android:textSize="12sp" 
+                            android:textColor="@color/c7"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="58dp"
+                    android:background="@color/bg_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll_ChangJianWenTi"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white" >
+
+                    <ImageView
+                        android:id="@+id/ivChangJianWenTi"
+                        style="@style/myHuatuo_tab_icon_style"
+                        android:src="@drawable/uc_menu_help" />
+
+                    <TextView
+                        android:id="@+id/tvChangJianWenTi"
+                        style="@style/myHuatuo_tab_text_style"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:text="常见问题" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            style="@style/myHuatuo_tab_icon_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/uc_menu_link" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="58dp"
+                    android:background="@color/bg_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll_GuanYuHuaTuo"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white" >
+
+                    <ImageView
+                        android:id="@+id/ivGuanYuHuaTuo"
+                        style="@style/myHuatuo_tab_icon_style"
+                        android:src="@drawable/uc_menu_about" />
+
+                    <TextView
+                        android:id="@+id/tvGuanYuHuaTuo"
+                        style="@style/myHuatuo_tab_text_style"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="18dp"
+                        android:text="关于华佗" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            style="@style/myHuatuo_tab_icon_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/uc_menu_link" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

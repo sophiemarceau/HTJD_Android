@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+
+    <RelativeLayout
+        android:id="@+id/rl_selectAppointTime_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_selected_day_bg_yellow"
+        android:padding="3dp"
+        android:layout_centerInParent="true" >
+
+        <TextView
+            android:id="@+id/tv_selectAppointTime_dayCN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/c6"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/tv_selectAppointTime_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_selectAppointTime_dayCN"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textColor="@color/c6"
+            android:textSize="@dimen/text_size_12" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_header_color"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_back1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/tv_head"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_back_button_press"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_head"
+            style="@style/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="服务地址" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/tv_change_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="8dp"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/icon_arrow"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="城市"
+            android:maxEms="4"
+            android:textColor="@color/c5"
+            android:textSize="@dimen/text_size_14" 
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_select_addr_search_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <EditText
+                android:id="@+id/edt_address_search_area"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_search_address_del"
+                android:background="@null"
+                android:drawableLeft="@drawable/icon_location_search"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/edt_search_address2"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/c5"
+                android:textColorHint="@color/c7"
+                android:textSize="@dimen/text_size_15" >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/iv_search_address_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/icon_cancel"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" >
+
+        <ListView
+            android:id="@+id/lv_search_area"
+            style="@style/scrollbar_style"
+            android:divider="@color/bg_color"
+            android:dividerHeight="1dp"
+            android:visibility="gone" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/rl_address_default"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_search_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="无搜索结果"
+                android:textColor="@color/c6"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_shangquan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="热门商圈"
+                android:textSize="@dimen/text_size_14"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rl_fl_tab_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="7dp"
+                android:visibility="gone" >
+
+                <com.huatuo.custom_widget.FlowLayout
+                    android:id="@+id/fl_tab_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+                </com.huatuo.custom_widget.FlowLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_searchAdress_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="搜索历史"
+                android:textSize="@dimen/text_size_14"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/lv_searchAdress_history"
+                style="@style/scrollbar_style"
+                android:divider="@color/bg_color"
+                android:dividerHeight="1dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <include layout="@layout/load_data_error_layout" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white" >
+
+        <View
+            style="@style/splitLine2"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/btn_login_yellow"
+            android:gravity="center"
+            android:text="@string/select_city_set_location"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_17"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>

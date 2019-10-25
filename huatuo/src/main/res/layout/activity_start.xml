@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FrameLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/iv_change"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:layout_above="@+id/rl_jump"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/custom_jump_bg"
+        android:gravity="center"
+        android:text="3s"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18"
+        android:visibility="gone" />
+
+    <RelativeLayout
+         android:id="@+id/rl_jump"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true" 
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15.7dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_ad" />
+
+        <ImageView
+            android:id="@+id/iv_jump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15.7dp"
+            android:src="@drawable/icon_skip" />
+
+    </RelativeLayout>
+
+    <!-- <ImageView
+        android:id="@+id/iv_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_start_activity"/> -->
+
+</RelativeLayout>

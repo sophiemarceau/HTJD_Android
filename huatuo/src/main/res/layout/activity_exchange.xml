@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50"
+        android:background="@color/bg_header_color"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_back1"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_back_button_press"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="优惠兑换" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="5dp" >
+
+        <EditText
+            android:id="@+id/et_duihuanma"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/bt_duihuan"
+            android:background="@drawable/bg_location"
+            android:hint="请输入礼物券、兑换码等"
+            android:textColorHint="@color/c7"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_3" >
+
+        </EditText>
+
+        <Button
+            android:id="@+id/bt_duihuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_coupon_exchange"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_3" />
+
+    </RelativeLayout>
+<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    
+    <ListView
+        android:id="@+id/lv_duihuanquan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/bg_color"
+        android:dividerHeight="6dp"
+        android:padding="10dp" 
+         style="@style/scrollbar_style2">
+    </ListView>
+<include layout="@layout/load_data_error_layout" />
+ <include layout="@layout/load_data_empty_layout" />
+ </FrameLayout>
+</LinearLayout>

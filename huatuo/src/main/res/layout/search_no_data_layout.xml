@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/search_result_noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color" 
+        android:visibility="gone">
+
+         <ImageView
+            android:id="@+id/iv_noData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/icon_no_project" />
+        <TextView
+            android:id="@+id/tv_noData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="31dp"
+            android:layout_below="@+id/iv_noData"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/c6"
+            android:text="很抱歉，没有相关项目哦" />
+    </RelativeLayout>

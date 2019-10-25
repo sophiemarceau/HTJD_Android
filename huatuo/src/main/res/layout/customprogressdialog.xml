@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/custom_dialog_bg_white"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="20dp" >
+
+    <RelativeLayout
+        android:id="@+id/rl_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:indeterminateDrawable="@drawable/rotate_loading_github"
+            android:indeterminateDuration="1800" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_net_fail"
+        android:layout_width="49dp"
+        android:layout_height="60dp"
+        android:background="@drawable/img_no_signal"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/id_tv_loadingmsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_18" />
+
+</LinearLayout>

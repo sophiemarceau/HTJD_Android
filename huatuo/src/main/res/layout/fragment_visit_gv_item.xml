@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myhome_goods_gridview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_service_item_bg_white"
+    android:paddingBottom="10dp" >
+
+    <ImageView
+        android:id="@+id/iv_serviceImg"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_default_small" />
+
+    <TextView
+        android:id="@+id/tv_serviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_serviceImg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:singleLine="true"
+        android:textColor="@color/c5"
+        android:textSize="@dimen/text_size_15" />
+
+    <TextView
+        android:id="@+id/tv_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_serviceName"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/c6"
+        android:textSize="@dimen/text_size_13" />
+
+    <LinearLayout
+        android:id="@+id/layou_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_shop"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="3dp" 
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_price1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:paddingTop="2dp"
+            android:text="￥"
+            android:layout_gravity="bottom"
+            android:textColor="@color/c3"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/c3"
+            android:layout_gravity="bottom"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:paddingTop="2dp"
+            android:text="起"
+            android:textColor="@color/c3"
+            android:textSize="@dimen/text_size_12"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_Oldjiage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="#9a9a9a"
+             android:layout_gravity="bottom"
+            android:textSize="@dimen/text_size_12"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_servicePingfen"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:enabled="true"
+            android:gravity="right"
+            android:paddingTop="2dp"
+            android:singleLine="true"
+            android:textColor="@color/c6"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_collect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/icon_favorites_black"
+        android:visibility="gone" />
+
+</RelativeLayout>

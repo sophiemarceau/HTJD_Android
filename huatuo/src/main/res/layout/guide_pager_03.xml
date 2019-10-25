@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/guide_pager_03" />
+    <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp" >
+        <Button
+            android:id="@+id/btn_experience"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_btn_navigation"
+            android:onClick="experienceBtnClickListener"
+            android:text="@string/experience_immediately"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_1"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img_finger" />
+    </RelativeLayout> -->
+</RelativeLayout>

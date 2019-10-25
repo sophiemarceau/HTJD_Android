@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+     android:id="@+id/rl_selectAppointTime_clock"
+     android:paddingTop="5dp"
+     android:paddingLeft="5dp"
+     >
+
+        <TextView
+            android:id="@+id/tv_selectAppointTime_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+            android:textColor="@color/c6"
+            android:textSize="@dimen/text_size_16"/>
+        
+        <ImageView
+            android:id="@+id/iv_selectAppointTime_day_selected"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+           android:layout_below="@+id/tv_selectAppointTime_clock"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_timesel"
+            />
+</RelativeLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEAE5"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50"
+        android:background="@color/bg_header_color"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <LinearLayout
+            android:id="@+id/layout_zhifu_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_back_button_press"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="待付款" />
+    </RelativeLayout>
+
+    <FrameLayout 
+       android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"  >
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/scrollbar_style2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="14dp"
+                android:paddingTop="14dp" >
+
+                <RelativeLayout
+                    android:id="@+id/layout_pay_serviceName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"
+                    android:clickable="true" >
+
+                    <ImageView
+                        android:id="@+id/iv_pro_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_default_small" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_right"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/iv_pro_icon"
+                        android:background="@color/white" >
+					<TextView
+                            android:id="@+id/tv_pay_serviceName1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@color/c5"
+                            android:text="项目名称："
+                            android:textSize="@dimen/text_size_17" />
+                        <TextView
+                            android:id="@+id/tv_pay_serviceName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/tv_pay_serviceName1"
+                            android:textColor="@color/c5"
+                            android:singleLine="true"
+                            android:textSize="@dimen/text_size_17" />
+
+                        <TextView
+                            android:id="@+id/tv_pay_orderMoney1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/tv_pay_serviceName1"
+                            android:layout_below="@+id/tv_pay_serviceName1"
+                            android:layout_marginTop="10dp"
+                            android:text="价格："
+                            android:textColor="@color/c5"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_pay_orderMoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/tv_pay_orderMoney1"
+                            android:layout_alignTop="@+id/tv_pay_orderMoney1"
+                            android:textColor="@color/c5"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_weixinPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/iv_weixinPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_weixinPay"
+                    style="@style/pay_textStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/iv_weixinPay"
+                    android:text="微信支付" />
+            </RelativeLayout>
+
+            <include layout="@layout/appoint_pay_type_layout" />
+
+            <View style="@style/splitLine" />
+
+
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/load_data_error_layout" />
+        <include layout="@layout/load_data_empty_layout" />
+</FrameLayout>
+    <include layout="@layout/appoint_bt_commit_layout" 
+        android:visibility="gone"/>
+
+</LinearLayout>

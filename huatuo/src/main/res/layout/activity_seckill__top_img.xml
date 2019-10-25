@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/id_stickynavlayout_topview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@id/iv_secskill_project_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_default_big" />
+
+    <com.huatuo.custom_widget.CustomListView
+        android:id="@id/lv_secskill_project_top_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iv_secskill_project_icon"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:divider="@color/white"
+        android:dividerHeight="10dp" 
+    	android:background="@color/white"
+    	android:paddingTop="10dp"
+    	android:paddingBottom="10dp">
+    </com.huatuo.custom_widget.CustomListView>
+
+</RelativeLayout>

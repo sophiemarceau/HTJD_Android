@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <!-- 二维码 -->
+    <item name="auto_focus" type="id"/>
+    <item name="decode" type="id"/>
+    <item name="quit" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="return_scan_result" type="id"/>
+    <item name="launch_product_query" type="id"/>
+    <item name="dl_rl_home_title" type="id"/>
+    <item name="dl_rl_search_title" type="id"/>
+    <item name="ir_common_title" type="id"/>
+    <item name="tv_alert" type="id"/>
+    <item name="dl_et_search" type="id"/>
+    <item name="dl_rl_title" type="id"/>
+    <item name="dl_rl_bottom" type="id"/>
+    <item name="dl_ll_footer" type="id"/>
+    <item name="dl_rl_middle" type="id"/>
+    <item name="dl_iv_foot_home" type="id"/>
+    <item name="dl_iv_foot_search" type="id"/>
+    <item name="dl_iv_foot_brand" type="id"/>
+    <item name="dl_iv_foot_shopping" type="id"/>
+    <item name="dl_iv_foot_mycount" type="id"/>
+    <item name="ml_iv_search" type="id"/>
+    <item name="dl_iv_title_qrcode" type="id"/>
+    <item name="dl_iv_title_search_delete" type="id"/>
+    <item name="dl_iv_check" type="id"/>
+    <item name="nearshop_layout" type="id"/>
+    <item name="nearshop_button" type="id"/>
+    <item name="nearshop_search_edit" type="id"/>
+    
+    <!--  秒杀专场-->
+    
+    <item name="id_stickynavlayout_topview" type="id"/>
+     <item name="iv_secskill_project_icon" type="id"/>
+      <item name="lv_secskill_project_top_info" type="id"/>
+    <item name="id_stickynavlayout_viewpager" type="id"/>
+    <item name="id_stickynavlayout_indicator" type="id"/>
+     <item name="id_stickynavlayout_tab" type="id"/>
+    <item name="id_stickynavlayout_innerscrollview" type="id"/>
+      <item name="id_stickynavlayout_listview" type="id"/>
+    
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rl_loadData_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color" 
+        android:visibility="gone">
+
+         <ImageView
+            android:id="@+id/iv_noData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/img_no_signal" />
+        <TextView
+            android:id="@+id/tv_noData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/iv_noData"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/c6"
+            android:text="网络不给力，请稍后再试" />
+         <TextView
+            android:id="@+id/tv_againLoadData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/tv_noData"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/c5"
+            android:text="重新加载" 
+            android:background="@drawable/custom_again_load_data_bg"/>
+    </RelativeLayout>

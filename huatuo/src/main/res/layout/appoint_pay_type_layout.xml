@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="支付方式"
+        android:background="@color/bg_color"
+        android:textColor="@color/c5"
+        android:textSize="@dimen/text_size_15" />
+
+    <RelativeLayout
+        android:id="@+id/layout_accountPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_accountPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_order_paybalance" />
+
+        <TextView
+            android:id="@+id/cx_accountPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_accountPay"
+            android:singleLine="true"
+            android:text="@string/quick_pay_account"
+            android:textColor="@color/c6"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:id="@+id/tx_accountPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/cx_accountPay"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="@color/c3"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:id="@+id/tx_accountPay2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tx_accountPay"
+            android:singleLine="true"
+            android:text="元"
+            android:textColor="@color/c6"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:id="@+id/iv_accountPay_select"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone" 
+            android:src="@drawable/icon_order_paycheck"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_accountPay_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="10dp" 
+        android:visibility="gone">
+
+        <View style="@style/splitLine" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_alipay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_alipay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_order_payalipay" />
+
+        <TextView
+            android:id="@+id/cx_aliPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_alipay"
+            android:singleLine="true"
+            android:text="@string/quick_pay_ali"
+            android:textColor="@color/c6"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:id="@+id/iv_alipay_select"
+           android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone" 
+            android:src="@drawable/icon_order_paycheck"/>
+    </RelativeLayout>
+ <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="10dp" >
+
+        <View style="@style/splitLine" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/layout_wxPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_wxPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_order_payweixin" />
+
+        <TextView
+            android:id="@+id/cx_WXPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_wxPay"
+            android:singleLine="true"
+            android:text="@string/quick_pay_wx"
+            android:textColor="@color/c6"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:id="@+id/iv_wxPay_select"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone" 
+            android:src="@drawable/icon_order_paycheck"/>
+    </RelativeLayout>
+
+</LinearLayout>

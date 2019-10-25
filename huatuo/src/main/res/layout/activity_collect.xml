@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_back1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50"
+        android:background="@color/bg_header_color"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_back1"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_back_button_press"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_headTiele"
+            style="@style/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的收藏" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_back1"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl_tab_shop"
+            style="@style/ad_list_tab_style2" >
+
+            <TextView
+                android:id="@+id/tv_tab_shop"
+                style="@style/collect_list_tab_text_style"
+                android:text="门店" />
+
+            <View
+                android:id="@+id/view_tab_shop"
+                style="@style/collect_list_tab_line_style"
+                android:layout_below="@+id/tv_tab_shop" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_tab_service"
+            style="@style/ad_list_tab_style2" >
+
+            <TextView
+                android:id="@+id/tv_tab_service"
+                style="@style/collect_list_tab_text_style"
+                android:text="项目" />
+
+            <View
+                android:id="@+id/view_tab_service"
+                style="@style/collect_list_tab_line_style"
+                android:layout_below="@+id/tv_tab_service" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_tab_tech"
+            style="@style/ad_list_tab_style2" >
+
+            <TextView
+                android:id="@+id/tv_tab_tech"
+                style="@style/collect_list_tab_text_style"
+                android:text="技师" />
+
+            <View
+                android:id="@+id/view_tab_tech"
+                style="@style/collect_list_tab_line_style"
+                android:layout_below="@+id/tv_tab_tech" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_tab_find"
+            style="@style/ad_list_tab_style2" >
+
+            <TextView
+                android:id="@+id/tv_tab_find"
+                style="@style/collect_list_tab_text_style"
+                android:text="发现" />
+
+            <View
+                android:id="@+id/view_tab_find"
+                style="@style/collect_list_tab_line_style"
+                android:layout_below="@+id/tv_tab_find" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_tab" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/lv_list_store"
+            style="@style/scrollbar_style2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:cacheColorHint="#00000000"
+               android:divider="@null"
+            android:paddingTop="10dp"
+            android:listSelector="#00000000"
+            android:visibility="visible"
+            ptr:ptrAnimationStyle="flip" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshGridView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/gv_list_service"
+            style="@style/scrollbar_style2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:cacheColorHint="#00000000"
+            android:horizontalSpacing="10dp"
+            android:listSelector="#00000000"
+            android:numColumns="2"
+            android:paddingTop="10dp"
+            android:verticalSpacing="10dp"
+            android:visibility="visible"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrMode="both" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/lv_list_tech"
+            style="@style/scrollbar_style2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:cacheColorHint="#00000000"
+              android:divider="@null"
+            android:paddingTop="10dp"
+            android:listSelector="#00000000"
+            android:visibility="visible"
+            ptr:ptrAnimationStyle="flip" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/lv_find_list"
+            style="@style/scrollbar_style2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/bg_color"
+            android:dividerHeight="10dp"
+            android:listSelector="#00000000"
+            android:visibility="visible"
+            ptr:ptrAnimationStyle="flip" />
+
+        <include layout="@layout/collect_no_data_layout" />
+        <include layout="@layout/load_data_error_layout" />
+        <include layout="@layout/load_data_empty_layout" />
+    </FrameLayout>
+
+</RelativeLayout>

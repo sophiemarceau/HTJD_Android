@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <!-- fragment container -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             >
+        </FrameLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#b2b2b2" />
+    <!-- 底部导航栏 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_tab_bg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_home_first"
+            style="@style/home_tab_style"
+            android:drawableTop="@drawable/tab_home"
+            android:text="@string/fisrt_tab" />
+
+        <TextView
+            android:id="@+id/tv_home_visit"
+            style="@style/home_tab_style"
+            android:drawableTop="@drawable/tab_door"
+            android:text="@string/visit_tab" />
+
+        <TextView
+            android:id="@+id/tv_home_found"
+            style="@style/home_tab_style"
+            android:drawableTop="@drawable/tab_found"
+            android:text="@string/found_tab" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_home_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/tab_orders"
+                android:text="@string/order_tab"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/tv_order_num"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignRight="@+id/tv_home_order"
+                android:layout_alignTop="@+id/tv_home_order"
+                android:layout_marginRight="-3dp"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/bg_order_number"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_home_wode"
+            style="@style/home_tab_style"
+            android:drawableTop="@drawable/tab_usercenter"
+            android:text="@string/mine_tab" />
+    </LinearLayout>
+
+</LinearLayout>

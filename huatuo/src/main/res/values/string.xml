@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 测式环境  域名  目前用 -->
+    
+   <!--  <string name="serviceBaseUrl">http://server.huatuojiadao.cn/huatuo_server/</string>
+    <string name="key">594f803b380a41396ed63dca39503542</string> -->
+   
+
+    <!-- 正式环境  域名 目前用 -->
+    
+    <string name="serviceBaseUrl">http://server.huatuojiadao.com/huatuo_server/</string>
+    <string name="key">1234567890</string>
+   
+
+    <string name="payBaseUrl">http://192.168.199.199:8080/huatuo_pay/</string>
+    <string name="uploadFileBaseUrl">http://img.deesha.com/imageServer/</string>
+    <string name="shareUrl">http://yj.deesha.com:8887/</string>
+
+    <!-- 分享链接 -->
+    <!-- 1. 门店详情 -->
+    <string name="share_shop">http://wechat.huatuojiadao.com/weixin_user/html/wechat.html#shop-detail?id=</string>
+    <!-- 2. 项目详情 -->
+    <string name="share_project">http://wechat.huatuojiadao.com/weixin_user/html/wechat.html#project-detail?id=</string>
+    <!-- 3. 技师详情 -->
+    <string name="share_tech">http://wechat.huatuojiadao.com/weixin_user/html/wechat.html#pt-detail?id=</string>
+    <!-- 3. 发现详情 -->
+    <string name="share_find">http://wechat.huatuojiadao.com/weixin_user/html/wechat.html#discover-detail?id=</string>
+
+    <!-- 默认城市信息 -->
+    <string name="df_city">北京</string>
+    <string name="df_address">北京市朝阳区光华路soho</string>
+    <string name="df_citycode">110100</string>
+    <string name="df_open_status">0</string>
+    <string name="df_lng">116.445831</string>
+    <string name="df_lat">39.911846</string>
+    <string name="test">test</string>
+    <string name="test_price">￥1234</string>
+    <string name="test_shopName"></string>
+    <string name="test_projectName"></string>
+    <string name="test_techName"></string>
+    <string name="test_jainjie"></string>
+    <string name="test_tech"></string>
+    <string name="channel">MeiZu_CHANNEL</string>
+    <string name="app_name">华佗驾到</string>
+
+    <!-- tab -->
+    <string name="fisrt_tab">到店</string>
+    <string name="visit_tab">上门</string>
+    <string name="found_tab">发现</string>
+    <string name="order_tab">订单</string>
+    <string name="mine_tab">我的</string>
+    <string name="common_quit_application_message">您确定要退出华佗驾到客户端吗?</string>
+    <string name="experience_immediately">立即体验</string>
+    <string name="common_quit_application_title">退出</string>
+    <string name="common_confirm">确定</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_prompt_title">提示</string>
+    <string name="viewpager_traffic_bus_line_detail_prompt_call">确定拨打电话？</string>
+    <string name="common_toast_net_prompt_down">数据加载中&#8230;</string>
+    <string name="common_toast_net_down_data_fail">数据获取失败，请检查网络后重试</string>
+    <string name="common_toast_net_down_data_is_null">数据为空</string>
+    <string name="common_toast_net_prompt_submit">数据加载中&#8230;</string>
+    <string name="common_toast_locationCity_prompt_submit">定位中&#8230;</string>
+    <string name="common_toast_net_up_data_s">数据提交成功</string>
+    <string name="common_toast_net_up_data_fail">数据提交失败，请检查网络后重试</string>
+    <string name="common_toast_net_not_connect">无网络连接，请检查网络</string>
+    <string name="common_toast_net_connect_error">网络异常，请检查网络</string>
+    <string name="web_view_load_time_out">是不是网络连接断啦，再重新加载一次</string>
+    <string name="home_index">首页</string>
+    <string name="home_order">我的订单</string>
+    <string name="home_personal">我的华佗</string>
+    <string name="home_services">服务中心</string>
+    <!-- 选技师 -->
+    <string name="technician_select">选技师</string>
+    <string name="technician_order">按成单</string>
+    <string name="technician_distance">按距离</string>
+    <string name="technician_level">按等级</string>
+    <string name="technician_detail_service_item">服务项目</string>
+    <string name="technician_detail_comment">客户评价</string>
+    <!-- 选服务 -->
+    <string name="service_select">上门服务</string>
+    <string name="service_full">全部项目</string>
+    <string name="service_detail">服务详情</string>
+    <string name="service_detail_service_recommend">服务介绍</string>
+    <string name="service_detail_other_service">查看该技师其他服务</string>
+    <string name="service_detail_order">我要预约</string>
+    <string name="service_reservation_title">预约服务</string>
+    <string name="service_reservation_select_time">选择预约时间</string>
+    <string name="service_reservation_select_address">输入您的地址</string>
+    <string name="service_reservation_technician">看技师</string>
+    <string name="service_reservation_service">看服务</string>
+    <!-- 我的订单 -->
+    <string name="order_viewPager_navigation_full">全部</string>
+    <string name="order_viewPager_navigation_not_pay">待支付</string>
+    <string name="order_viewPager_navigation_in_progress">进行中</string>
+    <string name="order_viewPager_navigation_not_comment">未评论</string>
+    <string name="order_viewPager_navigation_complete_comment">已评论</string>
+    <string name="order_pay">付款</string>
+    <string name="order_comment">评论</string>
+    <string name="order_complete_comment">已评论</string>
+    <string name="order_in_progress_prompt">请保持手机畅通</string>
+    <string name="order_process_confirm">订单确认</string>
+    <string name="order_confirm_prompt">尊敬的用户：{0} 您好，您正在预约“华佗驾到”上门服务。</string>
+    <string name="order_select_sevice_time">请选择服务时间</string>
+    <string name="order_select_sevice_time_title">选择服务时间</string>
+    <string name="order_confirm">确认下单</string>
+    <string name="order_other_address">使用其他地址</string>
+    <!-- 个人中心 -->
+    <string name="person_services">服务</string>
+    <string name="person_integral">积分</string>
+    <string name="person_register_time">注册时间：</string>
+    <string name="person_address">我的地址</string>
+    <string name="person_comment">我的评论</string>
+    <string name="person_collect">我的收藏</string>
+    <string name="person_share">分享给好友</string>
+    <string name="person_submit_comment">发表评论</string>
+    <string name="person_text_submit">提交</string>
+    <string name="person_address_manage">我的地址管理</string>
+    <string name="person_address_address_edit">修改地址</string>
+    <string name="person_address_address_edit1">添加新地址</string>
+    <string name="person_address_address_myAddress">服务地址</string>
+    <string name="person_address_add">添加</string>
+    <string name="person_address_edit">修改</string>
+    <string name="person_address_complete">完成</string>
+    <string name="person_address_delete">删除地址</string>
+    <string name="person_address_default">设为默认地址</string>
+    <string name="person_address_prompt">*请填写您的真实信息以便我们为您服务*</string>
+    <string name="person_address_name">请填写您的真实姓名</string>
+    <string name="person_address_mobile">请填写您的手机号</string>
+    <string name="person_address_address">请填写您的地址</string>
+    <string name="person_address_select">选择地址</string>
+
+    <!-- 搜索 -->
+    <string name="search_store">请输入门店名称</string>
+    <string name="search_service">请输入项目名称</string>
+    <string name="search_tech">请输入技师名称</string>
+    <string name="search_menu_tech">技师</string>
+    <string name="search_menu_store">门店</string>
+    <string name="search_menu_service">项目</string>
+    <string name="search_no_service">很抱歉，没有相关项目哦</string>
+    <string name="search_no_tech">很抱歉，没有相关技师哦</string>
+    <string name="search_no_store">很抱歉，没有相关门店哦</string>
+
+    <!-- 服务中心 -->
+    <string name="services_center_explain_1">服务内容说明</string>
+    <string name="services_center_explain_2">服务范围说明</string>
+    <string name="services_center_explain_3">服务纠纷说明</string>
+    <string name="services_center_about">关于华佗驾到</string>
+    <string name="services_center_hotline">客服热线</string>
+    <!-- 服务中心  关于华佗驾到 -->
+    <string name="services_center_about_copyright">Copyright 2014 www.huatuojiadao.com All Rights Reserved</string>
+    <string name="services_center_about_hotline">客服电话</string>
+    <string name="services_center_about_business">商务洽谈</string>
+    <!-- 登录/注册 -->
+    <string name="login">快捷登录</string>
+    <string name="login1">登录</string>
+    <string name="recharge">充值</string>
+    <string name="contact">联系人</string>
+    <string name="login_mobile">手机号</string>
+    <string name="login_password">验证码</string>
+    <string name="login_forget_password"><u>忘记密码</u></string>
+    <string name="register">注册</string>
+    <string name="register_identifyingCode">验证码</string>
+    <string name="register_get_identifyingCode">获取验证码</string>
+    <string name="register_mobile_is_null">手机号不能为空</string>
+    <string name="register_mobile_is_error">请输入正确的手机号</string>
+    <string name="register_password_is_null">验证码不能为空</string>
+    <string name="et_register_tel">手机号不能为空</string>
+    <string name="et_import_code">验证码不能为空</string>
+    <string name="et_setting_login_password">密码不能为空</string>
+    <string name="password_not_less_than_six">密码不能小于六位</string>
+    <string name="password_not_equal">输入的密码必须相同</string>
+    <string name="tel_mistake">手机号码错误</string>
+    <string name="register_get_identifying_code_again">s后重新获取</string>
+    <string name="QueRenXiuGai">确认修改</string>
+    <!-- 选择城市 -->
+    <string name="select_city">选择城市</string>
+    <string name="select_city_gps">GPS定位城市</string>
+    <string name="select_city_service">已开通服务城市</string>
+    <string name="select_city_location">定位中…</string>
+    <string name="select_city_set_location">定位为当前位置</string>
+
+    <!-- 预约 -->
+    <string name="appoint_store">到店</string>
+    <string name="appoint_visit">上门</string>
+    <string name="appoint_select_address">请选择或添加上门信息</string>
+    <string name="appoint_select_tech">请选择技师</string>
+    <string name="appoint_dialog_tips">账户余额支付：</string>
+    <string name="pay_no_enough_tips">余额不够单独支付订单</string>
+    <string name="pay_no_choice_payType">请选择支付方式</string>
+    <!-- 地址管理 -->
+
+    <string name="loacation_proceed">正在获取当前位置…</string>
+    <string name="loacation_error">正在获取当前位置…</string>
+    <string name="edt_search_address">请输入上门服务地址</string>
+    <string name="edt_search_address2">小区、大厦或街道名字</string>
+    <string name="edt_search_addressDetail">请填写详细地址（门牌号等）</string>
+    <string name="search_address_error">该地址信息不全，请重新搜索</string>
+
+    <!-- xListView -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在刷新…</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">上拉加载更多</string>
+    <string name="xlistview_footer_hint_ready">松开加载更多</string>
+    <string name="xlistview_footer_hint_no_more">没有更多数据</string>
+
+    <!-- 不能加钟 -->
+    <string name="cannot_addTime">您现在不能加钟</string>
+
+    <!-- 加钟 -->
+    <string name="addTime_order1">加钟订单</string>
+    <string name="addtime_tips1">如技师1小时后有单，则最大单位为4个钟</string>
+    <string name="addtime_tip">友情提示：</string>
+    <string name="addtime_tips2">如技师两个小时后有单，则最大单位为2个钟</string>
+    <string name="tv_addtime_cunpon">代金券</string>
+    <string name="bt_addtime_commitPay">确认支付</string>
+
+    <!-- 首页 -->
+    <string name="edit_search_store_or_tech_hint">店铺/技师</string>
+    <string name="edit_search_store_hint">请输入店铺名字</string>
+    <string name="edit_search_tech_hint">请输入技师名字</string>
+    <string name="technician_near">附近技师</string>
+    <string name="service_visit">上门服务</string>
+    <string name="near_shop">附近门店</string>
+    <string name="brand_shop_hint">品牌内店铺</string>
+    <string name="tuijian">智能推荐</string>
+    <string name="near_fromMine">离我最近</string>
+    <string name="appraise_high">评价最高</string>
+    <string name="price_low">价格最低</string>
+    <string name="order_more">订单最多</string>
+    <string name="go_to_store_service">到店服务</string>
+    <string name="bestWords">口碑门店</string>
+    <string name="hight_popur">人气门店</string>
+    <string name="null_store_tips">对不起，没有找到相关店铺哦~</string>
+    <string name="null_tech_tips">对不起，没有找到相关技师哦~</string>
+    <string name="not_openStore_tips">对不起，此城市暂未开通到店服务~~</string>
+    <string name="not_openVisit_tips">对不起，此城市暂未开通上门服务~~</string>
+    <string name="store_enviromen">店铺环境</string>
+    <string name="service_image">服务项目</string>
+    <string name="tech_intro">技师介绍</string>
+    <!-- 身边技师 -->
+    <string name="all_tech">全部技师</string>
+    <string name="man_tech">男技师</string>
+    <string name="woman_tech">女技师</string>
+    <!-- 版本更新 -->
+    <string name="soft_update_no">已经是最新版本</string>
+    <string name="soft_update_title">软件更新</string>
+    <string name="soft_update_info">检测到新版本，立即更新吗</string>
+    <string name="soft_update_updatebtn">更新</string>
+    <string name="soft_update_later">稍后更新</string>
+    <string name="soft_updating">正在更新</string>
+    <string name="soft_update_cancel">取消</string>
+
+    <!-- 店铺详细 -->
+    <string name="store_enviroment">店铺环境</string>
+    <string name="store_service">服务项目</string>
+    <string name="store_tech">技师介绍</string>
+    <string name="store_quick_pay">闪付买单，快捷更实惠</string>
+
+    <!-- GPS -->
+    <string name="open_gps">您的手机GPS未打开，为了准确定位您所在的位置，请您打开GPS定位服务</string>
+    <string name="close_gps">您的手机GPS处于开启状态，为了降低您的手机耗能，请您关闭GPS定位服务</string>
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="app_tip">提示</string>
+    <!-- 快捷支付 -->
+    <string name="quick_pay_hint">请询问门店工作人员后录入</string>
+    <string name="quick_pay_tip">买单可享以下优惠</string>
+    <string name="quick_payfee">消费总额</string>
+    <string name="quick_pay_realfee">实际金额</string>
+    <string name="quick_pay_ali">支付宝支付</string>
+    <string name="quick_pay_wx">微信支付</string>
+    <string name="quick_pay_account">账户支付：</string>
+    <string name="quick_orderDetail_phone">手机号码</string>
+    <string name="quick_orderDetail_useTime">消费时间</string>
+    <!-- &#160;&#160;&#160;&#160;代表中文状态下两个空格 -->
+    <!-- 预约页面 -->
+    <string name="select_tech">"请选择技师"</string>
+    <string name="select_tech_choice">"请选择技师(非必选)"</string>
+    <string name="select_service_time">"请选择服务时间"</string>
+    <string name="select_cunpon">"请选择优惠券"</string>
+    <string name="no_cunpon">"您没有可使用的优惠券"</string>
+    <string name="no_cunpon2">"无"</string>
+
+    <!-- 二维码扫描 -->
+    <string name="scan_error_text">二维码有误，请您扫描华佗驾到门店二维码</string>
+    <string name="scan_text">对准二维码到框内即可扫描</string>
+    <!-- 地图 -->
+    <string name="error_network">搜索失败,请检查网络连接！</string>
+    <string name="error_key">key验证无效！</string>
+    <string name="error_other">未知错误，请稍后重试!错误码为</string>
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+    <string name="app_id">56289e27</string>
+    <string name="preference_default_tts_role">xiaoyan</string>
+    <string name="preference_key_tts_speed">tts_speed</string>
+    <string name="preference_title_tts_speed">语速</string>
+    <string name="preference_default_tts_speed">50</string>
+    <string name="preference_key_tts_volume">tts_volume</string>
+    <string name="preference_key_tts_pitch">tts_pitch</string>
+    <!-- 上下拉控件 -->
+    <string name="head">这里是HeadView</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新&#8230;</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="loading">正在加载&#8230;</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+
+    <!-- 项目信息 -->
+    <string name="market_price">市场价</string>
+    <string name="load_no_more_data">已加载完全部</string>
+    <string name="cannot_wx_ali_pay">该订单实际支付￥0,,请选择账户余额支付</string>
+
+    <!-- 再次预约 提示语 -->
+    <string name="store_offLine">该门店已下线暂不可约，欢迎点选其他门店</string>
+    <string name="service_offLine">该项目已下线暂不可约，欢迎点选其他服务</string>
+    <string name="tech_offLine">该技师已下线暂不可约，欢迎点选其他技师</string>
+    <string name="tech_store_offLine">该技师已下线暂不可约，欢迎点选本店其他技师</string>
+    <!-- 闪付 -->
+    <string name="quick_pay_tips1">闪付是什么：闪付是一个先到店消费，后通过手机进行买单的工具，并且在支付时还有机会参与各项优惠，比刷卡快还便利、优惠。</string>
+    <string name="quick_pay_tips2">* 注：闪付买单仅限到店支付，请勿提前购买，如需发票请您在消费时向门店咨询。</string>
+    <string name="guide_error_tip">"您还未安装第三方地图客户端，本应用暂时支持（百度地图、高德地图），安装后方可使用导航功能"</string>
+    <string name="guide_no_activity_tip">"您还未安装第三方地图客户端，安装后方可使用导航功能"</string>
+
+</resources>

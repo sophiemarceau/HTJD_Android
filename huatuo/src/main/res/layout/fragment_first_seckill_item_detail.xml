@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/iv_secskill_project_icon"
+        android:layout_width="match_parent"
+        android:layout_height="267dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_default_big" />
+
+    <TextView
+        android:id="@+id/tv_secskill_project_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="13dp"
+        android:textColor="@color/c5"
+        android:textSize="@dimen/text_size_16"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rl_secskill_project_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" >
+
+        <TextView
+            android:id="@+id/tv_secskill_store1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="19dp"
+            android:background="#efefef"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+             android:paddingBottom="2dp"
+            android:text="门店"
+            android:textColor="#92969C"
+            android:textSize="@dimen/text_size_11" />
+
+        <TextView
+            android:id="@+id/tv_secskill_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/tv_secskill_store1"
+            android:textColor="#747277"
+            android:textSize="@dimen/text_size_13" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_secskill_addr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" >
+
+        <ImageView
+            android:id="@+id/iv_secskill_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="19dp"
+            android:src="@drawable/icon_awayfrom" />
+
+        <TextView
+            android:id="@+id/tv_secskill_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/iv_secskill_addr"
+            android:textColor="#747277"
+            android:textSize="@dimen/text_size_13" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/line_broken" />
+
+    <com.huatuo.custom_widget.CustomListView
+        android:id="@+id/lv_secskill_project_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="10dp"
+        android:divider="@color/white"
+        android:dividerHeight="10dp" >
+    </com.huatuo.custom_widget.CustomListView>
+
+    <ImageView
+        android:id="@+id/iv_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/line_broken" />
+
+    <com.huatuo.custom_widget.CustomListView
+        android:id="@+id/lv_secskill_project_grade"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="10dp"
+        android:divider="@color/white"
+        android:dividerHeight="10dp" >
+    </com.huatuo.custom_widget.CustomListView>
+
+    <include
+        android:id="@+id/grade_item"
+        layout="@layout/fragment_first_seckill_item_detail_grade_item2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bg_color" />
+
+</LinearLayout>

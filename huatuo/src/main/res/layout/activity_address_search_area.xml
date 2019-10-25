@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50"
+        android:background="@color/bg_header_color"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_back1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/tv_head"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_back_button_press"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_head"
+            style="@style/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/person_address_address_myAddress" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <EditText
+                android:id="@+id/edt_address_search_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/iv_search_address_del"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_location_search"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/edt_search_address2"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/c5"
+                android:textColorHint="@color/c7"
+                android:textSize="@dimen/text_size_16" >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/iv_search_address_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/icon_cancel"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--
+         <View
+        android:id="@+id/View_tab1"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#cec1a8" />
+    -->
+
+
+    <!--
+         <View
+        android:id="@+id/View_tab1"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="#cec1a8" />
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/custom_dialog_bg_white"
+        android:padding="7dp" >
+
+        <ImageView
+            android:id="@+id/iv_search_area_location1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_location" />
+
+        <TextView
+            android:id="@+id/tv_search_area_locationAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_search_area_location_refresh"
+            android:layout_toRightOf="@+id/iv_search_area_location1"
+            android:text=""
+            android:textColor="@color/chongzhi_contactsColor" />
+
+        <ImageView
+            android:id="@+id/iv_search_area_location_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_refresh" />
+    </RelativeLayout>
+
+    <!--
+         <View
+        android:id="@+id/View_tab1"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#cec1a8" />
+    -->
+ <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        >
+    <ListView
+        android:id="@+id/lv_search_area"
+        android:layout_marginTop="5dp"
+        android:divider="@color/bg_color"
+        android:dividerHeight="1dp" 
+        style="@style/scrollbar_style">
+    </ListView>
+    <TextView
+            android:id="@+id/tv_search_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="无搜索结果"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/c6" />
+</FrameLayout>
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/bg_header_color"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_back1"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_back_button_press"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_headTiele"
+            style="@style/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="评价" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/rl_fl_tab_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:visibility="gone" >
+
+                <com.huatuo.custom_widget.FlowLayout
+                    android:id="@+id/fl_tab_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" >
+                </com.huatuo.custom_widget.FlowLayout>
+            </RelativeLayout>
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/lv_pinglun"
+                style="@style/scrollbar_style2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_color"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:listSelector="#00000000"
+                android:paddingTop="10dp"
+                android:visibility="visible"
+                ptr:ptrAnimationStyle="flip" 
+                android:layout_below="@+id/rl_fl_tab_list"/>
+        </RelativeLayout>
+
+        <include layout="@layout/load_data_error_layout" />
+        <include layout="@layout/load_data_empty_layout" />
+    </FrameLayout>
+
+</LinearLayout>

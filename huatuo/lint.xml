@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="ExtraTranslation" severity="warning" />
+    <issue id="HandlerLeak" severity="ignore" />
+    <issue id="InflateParams" severity="ignore" />
+    <issue id="NewApi" severity="ignore">
+        <ignore path="src/com/huatuo/fragment/XiaoFeiMaActivity.java" />
+    </issue>
+    <issue id="ResourceAsColor" severity="ignore" />
+    <issue id="SetJavaScriptEnabled" severity="ignore" />
+    <issue id="UseSparseArrays" severity="ignore" />
+    <issue id="ViewHolder" severity="ignore" />
+</lint>

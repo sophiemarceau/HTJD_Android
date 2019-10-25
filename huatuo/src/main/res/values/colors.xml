@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 颜色值 开始 -->
+    <color name="c1">#c03230</color>
+    <color name="c2">#ededed</color>
+    <color name="c3">#d83219</color>
+    <color name="c4">#f39517</color>
+    <color name="c5">#1d1d1d</color>
+    <color name="c6">#747474</color>
+    <color name="c7">#c8c8c8</color>
+    <color name="c8">#ebebeb</color>
+    <color name="btn_text_blue">#007aff</color>
+    <color name="appraise_tag_unSelected_color">#c03230</color>
+    <color name="pop_menu">#4b4b4b</color>
+    <color name="fragment_vist_tab_color">#585858</color>
+    <color name="blue">#0000ff</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_login">#CC8122</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="pink">#F08080</color>
+    <color name="tran_black">#00000000</color>
+    <color name="time">#4a4a4a</color>
+    <!-- listView item 点击颜色 -->
+    <color name="listView_item_press">#E9E3D8</color>
+    <!-- 橘黄 -->
+    <color name="orange">#fe6101</color>
+    <!-- 大红 -->
+    <color name="bright_red">#fe0100</color>
+
+    <!-- 黑色 -->
+    <color name="black">#282828</color>
+
+    <!-- 红色 -->
+    <color name="red">#ec4a3e</color>
+
+    <!-- 灰色 -->
+    <color name="gray">#808080</color>
+
+    <!-- 绿色 -->
+    <color name="green">#39b67d</color>
+
+    <!-- 背景色 -->
+    <!-- <color name="bg_color">#e6e2db</color> -->
+    <color name="bg_color">#ededed</color>
+
+    <!-- 线条颜色 -->
+    <color name="line_color">#ebebeb</color>
+
+    <!-- 头部背景色 -->
+    <color name="bg_header_color">#c03230</color>
+    <color name="bg_header_color2">#c03230</color>
+    <!-- 默认地址背景色 -->
+    <color name="bg_default_address_color">#faf3d8</color>
+
+    <!-- 头部title颜色 -->
+
+    <color name="header_title_color">#FFFFFF</color>
+    <!-- <color name="header_title_color">#773914</color> -->
+    <!-- 圆形图片边框颜色 -->
+    <color name="image_view_circle_border_color">#cec1a8</color>
+    <!-- 选择分类字体颜色 -->
+    <color name="select_sort_text_color">#ab9283</color>
+    <!-- 选择分类字体选中颜色 -->
+    <color name="select_sort_text_s_color">#9c4e1f</color>
+    <!-- 数字颜色 -->
+    <color name="common_text_number_color">#c56a34</color>
+
+    <!-- 设置viewpager内部页面间距的drawable -->
+    <color name="page_viewer_margin_color">#d5d5d5</color>
+
+    <!-- 首页底部导航背景色 -->
+    <color name="bg_home_bottom_navigation_text">#fbfbfb</color>
+    <!-- 首页底部导航文字颜色 -->
+    <color name="home_bottom_navigation_text">#6c6c6c</color>
+    <!-- 首页底部导航文字颜色(未选中) -->
+    <color name="home_bottom_navigation_text_s">#6c6c6c</color>
+    <!-- 分割线颜色 -->
+    <color name="listView_division_line">#E2D6C5</color>
+
+    <!-- viewPager TitleIndicator 文本颜色 -->
+    <color name="titleIndicator_tab_text">#ab9283</color>
+    <!-- viewPager TitleIndicator 文本选中颜色 -->
+    <color name="titleIndicator_tab_text_s">#773914</color>
+    <!-- viewPager TitleIndicator 底部线的颜色 -->
+    <color name="titleIndicator_footer_lineColor">#773914</color>
+    <!-- 弹出窗口字体颜色 -->
+    <color name="popupWindow_text_color">#686868</color>
+    <!-- ++++++++++++++++++++++个人中心 +++++++++++++++++++++++ -->
+    <!-- 退出字体颜色 -->
+    <color name="personal_exit_text_color">#B58E7A</color>
+    <!-- 服务时间 滚轴颜色 -->
+    <color name="province_line_border">#C7C7C7</color>
+
+    <!-- 充值金额颜色 -->
+    <color name="chongzhi_moneyColor">#faa02f</color>
+
+    <!-- 充值账户字体颜色 -->
+    <color name="chongzhi_accountColor">#e49f3c</color>
+    <!-- 联系人金额颜色 -->
+    <color name="chongzhi_contactsColor">#7b7f84</color>
+    <!-- 附近店铺下拉颜色 -->
+    <color name="nearShop_select_color">#b4a68f</color>
+    <!-- 店铺详情分割线 -->
+    <color name="store_detail_line">#cbcbcb</color>
+    <!-- 服务详情 的中间三个按钮 的颜色 未选中的字体颜色 -->
+    <color name="serviceDetail_tabColor_unChecked">#c59358</color>
+    <!-- 服务详情 的中间三个按钮 的颜色 所在布局 背景颜色 -->
+
+    <color name="serviceDetail_tabColor_bg">#fdfaf5</color>
+
+    <!-- 验证码倒计时颜色 -->
+    <color name="login_timer_color_green">#2cca76</color>
+    <color name="login_timer_color_gray">#bfc4ca</color>
+    <color name="pop_checked_bg">#f2f2f2</color>
+    <color name="null_text_color">#bababa</color>
+    <color name="navpage">#FFE1E8EB</color>
+
+    <!-- 店铺优惠券字体颜色 -->
+    <color name="store_cunpon">#BCAE8B</color>
+    <color name="store_cunpon_gray">#C8C8C8</color>
+    <!-- 半透明 -->
+    <color name="pop_transparent">#28282828</color>
+    <color name="pop_transparent2">#282828</color>
+
+    <!-- start zxing 二维码 -->
+    <color name="viewfinder_frame">#2477ab</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_view">#b0000000</color>
+    <color name="backColor">#2000</color>
+    <color name="limit_buy_border_bg">#ffd4bc77</color>
+    <color name="search_toolbar_bg">#ff484B50</color>
+    <color name="toast_color">#ff2E76B9</color>
+    <color name="login_button">#ff775025</color>
+    <color name="tv_shopcart_fillForm_black">#000</color>
+    <color name="hostbutton">#767777</color>
+    <color name="bt_layout_bg">#f0efec</color>
+    
+    <!--秒杀  -->
+    <color name="unchecked_secSkillTime_color">#969696</color>
+    <color name="tv_secSkillTime_finish_color">#92969C</color>
+    <color name="tv_secSkillTime_color">#1d1d1d</color>
+    <!--秒杀 专题标签 -->
+     <color name="tv_secSkillSession_checked_color">#D83219</color>
+
+
+</resources>
