@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HTJD_Android.iml" filepath="$PROJECT_DIR$/HTJD_Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/huatuo/huatuo.iml" filepath="$PROJECT_DIR$/huatuo/huatuo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_pullTorefresh/library_pullTorefresh.iml" filepath="$PROJECT_DIR$/library_pullTorefresh/library_pullTorefresh.iml" />
+    </modules>
+  </component>
+</project>
